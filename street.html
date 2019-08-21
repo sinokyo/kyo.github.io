@@ -21,7 +21,7 @@
 </body>
 <script>
     function initialize() {
-        let params = new URLSearchParams(location.href.search) || {};
+        let params = new URLSearchParams(location.search) || {};
 
         var fenway = {
             lng: +params.get('lng') || -71.098326,
