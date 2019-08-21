@@ -21,9 +21,11 @@
 </body>
 <script>
     function initialize() {
+        let params = new URLSearchParams(location.href.search) || {};
+
         var fenway = {
-            lat: 42.345573,
-            lng: -71.098326
+            lng: +params.get('lng') || -71.098326,
+            lat: +params.get('lat') || 42.345573
         };
         var processSVData = function(data, status) {
             if (status === 'OK') {
